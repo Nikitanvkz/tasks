@@ -1,0 +1,35 @@
+.message {
+color: darkcyan;
+}
+
+.imageAndText {
+ color: deepskyblue;
+}
+
+.imageAndText img {
+ width: 100px;
+ height: 100px;
+ border: 2px solid red;
+}
+
+.text {
+color: black;
+}
+
+.text:after {
+ color: brown;
+}
+
+.name {
+ color: red;
+}
+
+.messageText {
+ color: indigo;
+ background-color: rgba(255,184,178,0.97);
+ width: min-content ;
+}
+
+.time {
+ color: indigo;
+}

@@ -1,0 +1,35 @@
+.friendMessage {
+    color: darkcyan;
+}
+
+.friendImageAndText {
+    color: deepskyblue;
+}
+
+.friendImageAndText img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+}
+
+.friendText {
+    color: black;
+}
+
+.friendText:after {
+    color: #0059b3;
+}
+
+.friendName {
+    color: blue;
+}
+
+.friendMessageText {
+    color: darkcyan;
+    background-color: rgba(255,184,178,0.97);
+    width: min-content ;
+}
+
+.friendTime {
+    color: aqua;
+}
