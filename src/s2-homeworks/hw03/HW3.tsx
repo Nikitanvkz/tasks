@@ -12,7 +12,6 @@ import GreetingContainer from './GreetingContainer'
 * 6 - в файле GreetingContainer.tsx дописать тип и логику функции setNameCallback
 * 7 - в файле GreetingContainer.tsx дописать логику функций pureAddUser, pureOnBlur, pureOnEnter и проверить их тестами
 * 8 - в файле GreetingContainer.tsx вычислить количество добавленных и имя последнего (totalUsers, lastUserName)
-*
 * 9 - в файле Greeting.tsx дописать типизацию пропсов
 * 10 - в файле Greeting.tsx вычислить inputClass в зависимости от наличия ошибки
 * 11 - сделать стили в соответствии с дизайном
@@ -24,10 +23,11 @@ export type UserType = {
     name: string // need to fix any
 }
 
-export const pureAddUserCallback = (name: string, setUsers: any, users: Array<UserType>) => { // need to fix any
-    const user = { _id:v1() , name: name
+export const pureAddUserCallback = (name: string, setUsers:Function, users: Array<UserType>) => { // need to fix any
+    const user = { _id:v1(), name:name
     }
     setUsers([...users, user])
+    console.log(users)
 }
 
 const HW3 = () => {

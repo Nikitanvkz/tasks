@@ -38,7 +38,8 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => {
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType):  Array<AffairType> => {
+    console.log(affairs)
     // need to fix any
     let filteredAffairs = [...affairs];
     if (filter === 'low') {

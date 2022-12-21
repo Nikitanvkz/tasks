@@ -4,20 +4,19 @@ import React, {
     FocusEventHandler,
     KeyboardEvent,
     KeyboardEventHandler,
-    MouseEventHandler,
-    MouseEvent
+    MouseEventHandler
 } from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
     name: string // need to fix any
-    setNameCallback:( e: ChangeEvent<HTMLInputElement>)=> void // need to fix any
+    setNameCallback: ChangeEventHandler<HTMLInputElement> // need to fix any
     addUser: MouseEventHandler<HTMLButtonElement> // need to fix any
     onBlur: FocusEventHandler<HTMLInputElement> // need to fix any
-    onEnter: KeyboardEventHandler<HTMLInputElement> // need to fix any
+    onEnter: (event: KeyboardEvent<HTMLInputElement>)=> void // need to fix any
     error: string | null // need to fix any
     totalUsers: number // need to fix any
-    lastUserName?: string // need to fix any
+    lastUserName: string  // need to fix any
 }
 
 // презентационная компонента (для верстальщика)
@@ -33,7 +32,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     } // деструктуризация пропсов
 ) => {
-    const inputClass = s.errorInput ? s.errorInput : s.input // need to fix with (?:)
+    const inputClass = s.errorInput ? s.errorInput : s.input// need to fix with (?:)
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
@@ -50,7 +49,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         id={'hw3-input'}
                         value={name}
                         onChange={setNameCallback}
-                        className={inputClass}
+                        className={inputClass ? s.errorInput : inputClass}
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
