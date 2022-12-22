@@ -14,12 +14,12 @@ type GreetingPropsType = {
     addUser: MouseEventHandler<HTMLButtonElement> // need to fix any
     onBlur: FocusEventHandler<HTMLInputElement> // need to fix any
     onEnter: (event: KeyboardEvent<HTMLInputElement>)=> void // need to fix any
-    error: string | null // need to fix any
+    error: string | '' // need to fix any
     totalUsers: number // need to fix any
-    lastUserName: string  // need to fix any
+    lastUserName?: any  // need to fix any
 }
 
-// презентационная компонента (для верстальщика)
+// презентационная компонента (для верстальщика)yarn
 const Greeting: React.FC<GreetingPropsType> = (
     {
         name,
@@ -53,9 +53,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
-                    <div id={'hw3-error'} className={s.error}>
-                        {error}
-                    </div>
+                    {error && <div id={'hw3-error'} className={s.error}>{error}</div>}
                 </div>
 
                 <button
