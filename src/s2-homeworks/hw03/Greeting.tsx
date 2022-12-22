@@ -8,6 +8,8 @@ import React, {
 } from 'react'
 import s from './Greeting.module.css'
 
+
+
 type GreetingPropsType = {
     name: string // need to fix any
     setNameCallback: ChangeEventHandler<HTMLInputElement> // need to fix any
@@ -16,7 +18,7 @@ type GreetingPropsType = {
     onEnter: (event: KeyboardEvent<HTMLInputElement>)=> void // need to fix any
     error: string | '' // need to fix any
     totalUsers: number // need to fix any
-    lastUserName?: any  // need to fix any
+    lastUserName?: any// need to fix any
 }
 
 // презентационная компонента (для верстальщика)yarn
@@ -49,7 +51,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         id={'hw3-input'}
                         value={name}
                         onChange={setNameCallback}
-                        className={inputClass ? 'error' : ''}
+                        className={inputClass}
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
