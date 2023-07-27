@@ -5,18 +5,28 @@
 }
 
 .error {
+    color: #cc0000;
 }
 
 .input {
+
 }
 
 .input:focus {
 }
 
 .errorInput {
+    border-color: red;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 1px;
 }
 
 .button {
+    border-color: blue;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 1px;
 }
 
 .button:focus {
